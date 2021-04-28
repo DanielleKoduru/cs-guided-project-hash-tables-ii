@@ -44,13 +44,6 @@ Note that 'B' and 'b' are treated as two different characters.
 ```
 """
 def frequency_sort(s: str) -> str:
-    """
-    Inputs:
-    s -> str
 
-    Output:
-    str
-    """
-    # Your code here
 
     
