@@ -42,14 +42,20 @@ Notes:
 - words in the input list only contain lowercase letters.
 ```
 """
-def top_k_frequent(words, k):
-    """
-    Input:
-    words -> List[str]
-    k -> int
+words = ["rules", "lambda", "school", "lambda", "school", "rocks"]
+k = 2
 
-    Output:
-    List[str]
-    """
-    # Your code here
+def top_k_frequent(words, k):
+    freq_dict = {}
+    for word in words: 
+        if word in freq_dict:
+            freq_dict[word] += 1
+        else:
+            freq_dict[word] = 1
+    # (x) => {}
+    sorted_items = sorted(freq_dict, key=lambda x: (-freq_dict[x], x))
+    print(sorted_items)
+    return sorted_items[:k]
+
+print(top_k_frequent(words, k))
 
